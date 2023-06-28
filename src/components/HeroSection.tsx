@@ -18,17 +18,20 @@ export const HeroSection = () => {
     const particlesLoaded = useCallback(async (container: Container | undefined) => {
         await console.log(container);
     }, []);
-    const [mode, setMode] = useState('light')
+
+    const [mode, setMode] = useState('dark')
+
 
   return (
         <section className=" bg-transparent">
                 <Particles
+                    className='h-screen absolute w-full z-[-10]'
                     id="tsparticles"
                     init={particlesInit}
                     loaded={particlesLoaded}
                     options={{
                         fullScreen:{
-                            enable: true,
+                            enable: false,
                             zIndex: -1
                         },
                         background: {
@@ -104,10 +107,10 @@ export const HeroSection = () => {
                         pauseOnOutsideViewport: true
                     }}
                 />
-            <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-60 lg:grid-cols-12 ">
-                <div className="mr-auto place-self-center lg:col-span-7">
-                    <button onClick={() => setMode('dark')}>Light</button>
-                    <h1 className={`max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl ${mode}:text-white`}>
+            <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-60 lg:grid-cols-12">
+                <div className="mr-auto place-self-center lg:col-span-7 mt-28">
+                    {/* <button onClick={() => setMode('light')}>Light</button> */}
+                    <h1 className={`max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white`}>
                         Hi! I'm cosmos I am a
                         <Typewriter
                             options={{
@@ -129,7 +132,7 @@ export const HeroSection = () => {
                         Developer
                     </h1>
                 </div>
-                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex mx-auto my-auto h-60">
+                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex mx-auto h-60 mt-52">
                     <img src={reactLogo} alt="mockup" />
                 </div>                
             </div>

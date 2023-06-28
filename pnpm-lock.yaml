@@ -20,6 +20,9 @@ dependencies:
   tsparticles-engine:
     specifier: ^2.10.1
     version: 2.10.1
+  tsparticles-preset-fire:
+    specifier: ^2.10.1
+    version: 2.10.1
   typewriter-effect:
     specifier: ^2.20.1
     version: 2.20.1(react-dom@18.2.0)(react@18.2.0)
@@ -1955,6 +1958,19 @@ packages:
     resolution: {integrity: sha512-SHuPH0qYA70gWNeOzn3DXk9W/IjTMtbeYhHWLOruTThrcLgBT4bRI5ooLnITjraMaTYf4FWdl7Mi/1MRkT5yUg==}
     dependencies:
       tsparticles-engine: 2.10.1
+    dev: false
+
+  /tsparticles-preset-fire@2.10.1:
+    resolution: {integrity: sha512-0IU3lIgLPe58tH64I8ixTg2CJqu0t+JFIex2FrgOzq5kSrLPmuEs6vdYwciTxVAt/H5oksmhYJEs1ePC2gLHOw==}
+    dependencies:
+      tsparticles-engine: 2.10.1
+      tsparticles-interaction-external-push: 2.10.1
+      tsparticles-move-base: 2.10.1
+      tsparticles-shape-circle: 2.10.1
+      tsparticles-updater-color: 2.10.1
+      tsparticles-updater-opacity: 2.10.1
+      tsparticles-updater-out-modes: 2.10.1
+      tsparticles-updater-size: 2.10.1
     dev: false
 
   /tsparticles-shape-circle@2.10.1:
