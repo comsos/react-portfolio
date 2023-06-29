@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from 'react'
-import reactLogo from '../assets/react.svg'
+
 import herosvg from '../assets/herosvg.svg'
+import mouse from '../assets/mouse.svg'
+
 import Typewriter from "typewriter-effect";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
@@ -24,7 +26,7 @@ export const HeroSection = () => {
 
 
   return (
-        <section className=" bg-transparent">
+        <section className=" bg-transparent min-h-screen min-w-screen">
                 <Particles
                     className='min-h-screen min-w-screen absolute'
                     id="tsparticles"
@@ -108,11 +110,11 @@ export const HeroSection = () => {
                         pauseOnOutsideViewport: true
                     }}
                 />
-            <div className="flex lg:flex-row min-h-screen min-w-screen-xl">
-                <div className=" mx-auto my-auto">
+            <div className="flex lg:flex-row min-h-screen min-w-screen">
+                <div className=" mx-auto my-auto py-auto ">
                     {/* <button onClick={() => setMode('light')}>Light</button> */}
                     <h1 className={`max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white`}>
-                        Hi! I'm cosmos I am a
+                        Hi! I'm cosmos, I am a
                         <Typewriter
                             options={{
                                 loop: true,
@@ -137,6 +139,7 @@ export const HeroSection = () => {
                     <img src={herosvg} alt="mockup"/>
                 </div>                
             </div>
+            <img className=' mt-[-5rem] place-content-center mx-auto animate-bounce' src={mouse} alt="mockup"/>  
         </section>
 
 
