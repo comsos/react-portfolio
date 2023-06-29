@@ -3,10 +3,9 @@ import reactLogo from '../assets/react.svg'
 import '../App.css'
 
 export default function Header() {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
       <nav className=" bg-transparent lg:absolute left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 pt-32">
-        <div className="max-w-screen-xl flex flex-row items-center space-x-48 mt-12 lg:mx-auto">
+        <div className="max-w-screen-xl flex flex-col items-center space-x-48 mt-12 lg:mx-auto">
           <a href="https://flowbite.com/" className="flex items-center">
               <img src={reactLogo} className="h-8 mr-3" alt="Flowbite Logo" />
           </a>

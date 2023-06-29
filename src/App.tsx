@@ -8,7 +8,7 @@ function App() {
 
   return (
       <div>
-        <Header />
+        {/* <Header /> */}
         <HeroSection />
         <TechStack />
       </div>

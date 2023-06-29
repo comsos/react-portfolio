@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import reactLogo from '../assets/react.svg'
+import herosvg from '../assets/herosvg.svg'
 import Typewriter from "typewriter-effect";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
@@ -25,13 +26,13 @@ export const HeroSection = () => {
   return (
         <section className=" bg-transparent">
                 <Particles
-                    className='h-screen absolute w-full z-[-10]'
+                    className='min-h-screen min-w-screen absolute'
                     id="tsparticles"
                     init={particlesInit}
                     loaded={particlesLoaded}
                     options={{
                         fullScreen:{
-                            enable: false,
+                            enable: true,
                             zIndex: -1
                         },
                         background: {
@@ -46,10 +47,10 @@ export const HeroSection = () => {
                                     enable: true,
                                     mode: "push",
                                 },
-                                // onHover: {
-                                //     enable: true,
-                                //     mode: "repulse",
-                                // },
+                                onHover: {
+                                    enable: true,
+                                    mode: "repulse",
+                                },
                                 resize: true,
                             },
                             modes: {
@@ -107,8 +108,8 @@ export const HeroSection = () => {
                         pauseOnOutsideViewport: true
                     }}
                 />
-            <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-60 lg:grid-cols-12">
-                <div className="mr-auto place-self-center lg:col-span-7 mt-28">
+            <div className="flex lg:flex-row min-h-screen min-w-screen-xl">
+                <div className=" mx-auto my-auto">
                     {/* <button onClick={() => setMode('light')}>Light</button> */}
                     <h1 className={`max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white`}>
                         Hi! I'm cosmos I am a
@@ -132,8 +133,8 @@ export const HeroSection = () => {
                         Developer
                     </h1>
                 </div>
-                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex mx-auto h-60 mt-52">
-                    <img src={reactLogo} alt="mockup" />
+                <div className="mx-auto my-auto ">
+                    <img src={herosvg} alt="mockup"/>
                 </div>                
             </div>
         </section>
