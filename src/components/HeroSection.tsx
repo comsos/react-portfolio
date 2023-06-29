@@ -139,7 +139,11 @@ export const HeroSection = () => {
                     <img src={herosvg} alt="mockup"/>
                 </div>                
             </div>
-            <img className=' mt-[-5rem] place-content-center mx-auto animate-bounce' src={mouse} alt="mockup"/>  
+            <div className='bg-gradient-to-t from-black to-transparent pb-[10rem]'>
+                <div className="mt-[-10rem]">
+                    <img className='place-content-center mx-auto animate-bounce' src={mouse} alt="mockup"/>  
+                </div>
+            </div>
         </section>
 
 
