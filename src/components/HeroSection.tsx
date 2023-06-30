@@ -26,7 +26,7 @@ export const HeroSection = () => {
 
 
   return (
-        <section className=" bg-transparent min-h-screen min-w-screen ">
+        <section className="snap-start bg-transparent min-h-screen min-w-screen ">
                 <Particles
                     className='min-h-screen min-w-screen absolute'
                     id="tsparticles"

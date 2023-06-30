@@ -7,8 +7,8 @@ import { TechStack } from './components/TechStack'
 function App() {
 
   return (
-      <div>
-        {/* <Header /> */}
+      <div className='snap-y snap-mandatory '>
+        <Header />
         <HeroSection />
         <TechStack />
       </div>
