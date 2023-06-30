@@ -26,7 +26,7 @@ export const HeroSection = () => {
 
 
   return (
-        <section className=" bg-transparent min-h-screen min-w-screen">
+        <section className=" bg-transparent min-h-screen min-w-screen ">
                 <Particles
                     className='min-h-screen min-w-screen absolute'
                     id="tsparticles"
@@ -139,8 +139,8 @@ export const HeroSection = () => {
                     <img src={herosvg} alt="mockup"/>
                 </div>                
             </div>
-            <div className='bg-gradient-to-t from-black to-transparent pb-[10rem]'>
-                <div className="mt-[-10rem]">
+            <div className='bg-gradient-to-t from-black to-transparent pb-[5rem] bottom-0 max-w-screen'>
+                <div className="mt-[-5rem]">
                     <img className='place-content-center mx-auto animate-bounce' src={mouse} alt="mockup"/>  
                 </div>
             </div>
