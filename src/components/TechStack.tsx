@@ -6,35 +6,74 @@ import tailwind from '../assets/frontend/tailwind.svg'
 import React, { useState, } from 'react'
 
 interface BurgerProps{
-    icon: any,
+    icon: any
     child: any[]
+
+}
+interface BurgerChildProps{
+    childIcon: any
+    xIndex: string
+    yIndex: string
+    isClicked: boolean
+
 }
 
 export const TechStack = () => {
 
+    const BurgerChild: React.FC<BurgerChildProps> = (props) => {
+        const { childIcon,yIndex,xIndex,isClicked = false } = props
+        return(
+            <img className={`${isClicked ?  `{mx-auto transition-transform transform ease-linear ${xIndex} ${yIndex} scale-100 }` : 
+            `{mx-auto transition-transform transform ease-linear translate-x-0 translate-y-0 scale-0 }`} h-20 absolute `}  src={childIcon} />
+        );
+
+    };
     const BurgerPart: React.FC<BurgerProps> = (props) => {
-        const [counter, setCounter] = useState(1)
-        
+
         const { icon,child } = props;
-        const childIcons: any[] = child.map((child,index) => <img className={`h-20 absolute mx-auto scale-0 group-hover:scale-100 ease-linear group-hover:translate-x-60
-            group-hover:translate-y-${(counter * 20).toString()} transition-all`}  src={child} alt={counter.toString()} />)
+        const [clicked, setClicked] = useState(false)
+        const children: any[] = child.map((child) => <BurgerChild childIcon={child.icon} xIndex={child.xIndex} yIndex={child.yIndex} isClicked={clicked} />)
         return (
           <div className=' flex flex-row mx-auto group'>
-            <img className="h-20 mx-auto grayscale hover:grayscale-0" src={icon} alt="buns" />
-            {childIcons}
+            <img onClick={() => setClicked(!clicked)} className={`h-20 mx-auto ${clicked ? "grayscale-0" : "grayscale"} hover:grayscale-0`} src={icon} />
+            {children}
           </div>
         );
       };
   return (
-    <div  className=' snap-start min-h-screen bg-black min-w-screen'>
+    <div  className=' snap-start min-h-screen bg-black min-w-screen translate- '>
         <div className="flex flex-col py-24 space-y-24">
             <div className="text-4xl font-extrabold tracking-tight leading-none text-white">
                 Tech Stack
             </div>
-            <BurgerPart icon={reactLogo} child={[css,javascript,html]} />
-            <BurgerPart icon={reactLogo} child={[css]} />
-            <BurgerPart icon={reactLogo} child={[css]} />
-            <BurgerPart icon={reactLogo} child={[css]} />
+            <BurgerPart icon={reactLogo} 
+            child={
+                [{'icon': css, 'xIndex':'translate-x-60', 'yIndex': '-translate-y-48'},
+                {'icon': html, 'xIndex': 'translate-x-52', 'yIndex': 'translate-y-8'},
+                {'icon': javascript, 'xIndex': 'translate-x-56', 'yIndex': 'translate-y-48'},
+                {'icon': reactLogo, 'xIndex': '-translate-x-52', 'yIndex': '-translate-y-8'},
+                {'icon': tailwind, 'xIndex': '-translate-x-52', 'yIndex': 'translate-y-24'},                
+                ]}
+            />
+            <BurgerPart icon={reactLogo} 
+            child={
+                [{'icon': css, 'xIndex':'translate-x-60', 'yIndex': '-translate-y-48'},
+                {'icon': html, 'xIndex': 'translate-x-52', 'yIndex': 'translate-y-8'},
+                {'icon': javascript, 'xIndex': 'translate-x-56', 'yIndex': 'translate-y-48'},
+                {'icon': reactLogo, 'xIndex': '-translate-x-52', 'yIndex': '-translate-y-8'},
+                {'icon': tailwind, 'xIndex': '-translate-x-52', 'yIndex': 'translate-y-24'},                
+                ]}
+            />
+                        <BurgerPart icon={reactLogo} 
+            child={
+                [{'icon': css, 'xIndex':'translate-x-60', 'yIndex': '-translate-y-48'},
+                {'icon': html, 'xIndex': 'translate-x-52', 'yIndex': 'translate-y-8'},
+                {'icon': javascript, 'xIndex': 'translate-x-56', 'yIndex': 'translate-y-48'},
+                {'icon': reactLogo, 'xIndex': '-translate-x-52', 'yIndex': '-translate-y-8'},
+                {'icon': tailwind, 'xIndex': '-translate-x-52', 'yIndex': 'translate-y-24'},                
+                ]}
+            />
+
         </div>
     </div>
 
