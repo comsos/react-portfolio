@@ -1,21 +1,23 @@
-import React, { useState } from 'react'
-import blackhole from '../assets/Black Hole.svg'
+import React, { useEffect, useState } from 'react'
 import Typewriter from "typewriter-effect";
 import Fade from "react-reveal/Fade";
 import {Link} from "react-router-dom"
 import '../App.css'
 
-type Mode = {
-  mode: string
+interface HeaderProps {
+  mode: string;
 }
 
-export default function Header(props: Mode) {
-  const [mode, setMode] = useState(props.mode)
+export default function Header({mode}: HeaderProps) {
+  useEffect(() => {
+    // This block of code will run whenever the `count` prop changes
+    console.log('Count prop changed:', mode);
+  }, [mode]);
   return (
-    <div className=" font-nue text-black mt-10 ml-10 absolute ">
-      <Fade top distance='10%'>
-        <h1 className=' text-3xl '>Cosmos Grimaldo</h1>
-        <Typewriter
+    <div className={`font-nue mt-10 ml-10 absolute ${mode == 'light' ? 'text-black' : 'text-white'} `}>
+        <h1 className=' text-name '>Cosmos Grimaldo</h1>
+        <div className="text-3xl">
+          <Typewriter
               options={{
                   loop: true,
               }}
@@ -31,18 +33,26 @@ export default function Header(props: Mode) {
                       .pauseFor(1000)
                       .start();
               }}
-          />
-          <ul>
-            <li key='TechStack'>
-              <Link to={"/"}>Home</Link>
-            </li>
-            <li key='TechStack'>
-              <Link to={"/TechStack"}>TechStack</Link>
-            </li>
-
-          </ul>
-      </Fade>
-      <button onClick={() => {mode =='dark' ? setMode('light') : setMode('dark')} }>{ mode.charAt(0).toUpperCase() + mode.slice(1) }</button>
+            />
+        </div>
+      <ul className='pt-24 text-nav'>
+          <li key='TechStack'>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li key='AboutMe'>
+            <Link to={"/AboutMe"}>About Me</Link>
+          </li>
+          <li key='TechStack'>
+            <Link to={"/TechStack"}>Tech Stack</Link>
+          </li>
+          <li key='Projects'>
+            <Link to={"/Projects"}>Projects</Link>
+          </li>
+          <li key='Links'>
+            <Link to={"/Links"}>Links</Link>
+          </li>
+      </ul>
+      
     </div>
   )
 }

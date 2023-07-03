@@ -7,7 +7,22 @@ export default {
   theme: {
     extend: {},
     fontSize: {
-      '3xl': ['2.5rem', {
+      '2xl': ['2rem', {
+        lineHeight: '2rem',
+        letterSpacing: '-0.02em',
+        fontWeight: '1',
+      }],
+      '3xl': ['3rem', {
+        lineHeight: '3.25rem',
+        letterSpacing: '-0.02em',
+        fontWeight: '1',
+      }],
+      'nav': ['2rem', {
+        lineHeight: '2rem',
+        letterSpacing: '-0.02em',
+        fontWeight: '1',
+      }],
+      'name': ['6rem', {
         lineHeight: '3.25rem',
         letterSpacing: '-0.02em',
         fontWeight: '1',
