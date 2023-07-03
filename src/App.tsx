@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header'
-import { HeroSection } from './components/HeroSection'
-import { TechStack } from './components/TechStack'
+import  { HeroSection }  from './components/HeroSection'
+import  { TechStack }  from './components/TechStack'
+import Header from "./components/Header"
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 
 function App() {
-
   return (
-      <div className='snap-y snap-mandatory '>
-        <Header />
-        <HeroSection />
-        <TechStack />
-      </div>
+    <BrowserRouter>
+      <Header mode='dark' />
+      <Routes>
+          <Route path="/TechStack" element={ <TechStack/> }/>
+      </Routes>
+      </BrowserRouter>
   )
 }
 

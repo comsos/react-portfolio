@@ -1,36 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import blackhole from '../assets/Black Hole.svg'
+import Typewriter from "typewriter-effect";
+import Fade from "react-reveal/Fade";
+import {Link} from "react-router-dom"
 import '../App.css'
 
-export default function Header() {
-  return (
-    <div className="flex flex-col fixed h-screen w-16 space-y-24 content-center top-24 left-6">
-      <a href="https://flowbite.com/" className="flex items-center bg-white py-4 px-4">
-        <img src={blackhole} className="h-8 mr-3 " alt="Flowbite Logo" />
-      </a>
-      <a href="https://flowbite.com/" className="flex items-center ">
-        <img src={blackhole} className="h-8 mr-3 " alt="Flowbite Logo" />
-      </a>
-      <a href="https://flowbite.com/" className="flex items-center">
-        <img src={blackhole} className="h-8 mr-3" alt="Flowbite Logo" />
-      </a>
-    </div>
-      // <nav className=" bg-transparent lg:absolute left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 pt-32">
-      //   <div className="max-w-screen-xl flex flex-col items-center space-x-48 mt-12 lg:mx-auto">
-      //     <a href="https://flowbite.com/" className="flex items-center">
-      //         <img src={reactLogo} className="h-8 mr-3" alt="Flowbite Logo" />
-      //     </a>
-      //     <a href="https://flowbite.com/" className="flex items-center">
-      //         <img src={reactLogo} className="h-8 mr-3" alt="Flowbite Logo" />
-      //     </a>
-      //     <a href="https://flowbite.com/" className="flex items-center">
-      //         <img src={reactLogo} className="h-8 mr-3" alt="Flowbite Logo" />
-      //     </a>
-      //     <a href="https://flowbite.com/" className="flex items-center">
-      //         <img src={reactLogo} className="h-8 mr-3" alt="Flowbite Logo" />
-      //     </a>
-      //   </div>
-      // </nav>
+type Mode = {
+  mode: string
+}
 
+export default function Header(props: Mode) {
+  const [mode, setMode] = useState(props.mode)
+  return (
+    <div className=" font-nue text-black mt-10 ml-10 absolute ">
+      <Fade top distance='10%'>
+        <h1 className=' text-3xl '>Cosmos Grimaldo</h1>
+        <Typewriter
+              options={{
+                  loop: true,
+              }}
+              onInit={(typewriter) => {
+                  typewriter
+                      .typeString("Shopify")
+                      .pauseFor(1000)
+                      .deleteAll()
+                      .typeString("ERPNext")
+                      .pauseFor(1000)
+                      .deleteAll()
+                      .typeString("Full-Stack")
+                      .pauseFor(1000)
+                      .start();
+              }}
+          />
+          <ul>
+            <li key='TechStack'>
+              <Link to={"/"}>Home</Link>
+            </li>
+            <li key='TechStack'>
+              <Link to={"/TechStack"}>TechStack</Link>
+            </li>
+
+          </ul>
+      </Fade>
+      <button onClick={() => {mode =='dark' ? setMode('light') : setMode('dark')} }>{ mode.charAt(0).toUpperCase() + mode.slice(1) }</button>
+    </div>
   )
 }

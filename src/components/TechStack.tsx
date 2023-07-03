@@ -41,7 +41,7 @@ export const TechStack = () => {
         );
       };
   return (
-    <div  className=' snap-start min-h-screen bg-black min-w-screen translate- '>
+    <div  className=' snap-start min-h-screen bg-transparent absolute right-0 mr-11 min-w-screen translate- '>
         <div className="flex flex-col py-24 space-y-24">
             <div className="text-4xl font-extrabold tracking-tight leading-none text-white">
                 Tech Stack

@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {},
+    fontSize: {
+      '3xl': ['2.5rem', {
+        lineHeight: '3.25rem',
+        letterSpacing: '-0.02em',
+        fontWeight: '1',
+      }],
+    },
     screens: {
       xs: '375px',
       sm: '640px',
@@ -18,6 +25,9 @@ export default {
       center: true,
       padding: "1rem",
     },
+    fontFamily:{
+      'nue': ['Neue Montreal']
+    }
   },
   plugins: [],
 }
