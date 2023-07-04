@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect} from 'react'
 import Typewriter from "typewriter-effect";
-import Fade from "react-reveal/Fade";
 import {Link} from "react-router-dom"
 import '../App.css'
 

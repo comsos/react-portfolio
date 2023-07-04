@@ -83,6 +83,8 @@ export const TechStack = ({mode}: TechStackProps) => {
                     <img className='h-14' src={powershell} alt="powershell" />
                     <img className='h-14' src={vscode} alt="vscode" />
                     <img className='h-14' src={docker} alt="docker" />
+                    <img className='h-14' src={postman} alt="docker" />
+                    <img className='h-14' src={linux} alt="docker" />
                   </div>
               </div>
         </div>

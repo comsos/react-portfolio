@@ -1,4 +1,3 @@
-import React, { useCallback, useState } from 'react'
 import Fade from "react-reveal/Fade";
 
 interface HeroSectionProps {

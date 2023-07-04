@@ -1,6 +1,5 @@
-import React from 'react'
 import renu from '../assets/projects/renu.png'
-import Fade from "react-reveal/Fade";
+import Fade from 'react-reveal/Fade';
 
 interface ProjectsProps{
     mode: string

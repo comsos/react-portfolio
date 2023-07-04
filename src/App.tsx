@@ -1,5 +1,5 @@
 import './App.css'
-import { useState,useRef } from 'react'
+import { useState } from 'react'
 import  { HeroSection }  from './components/HeroSection'
 import  { TechStack }  from './components/TechStack'
 import Header from "./components/Header"
@@ -134,10 +134,6 @@ function App() {
     "How disgusting.",
     "The End"
   ];
-  console.log(dialogue.map((c) => {
-    return {c}
-  }))
-  const ref = useRef(null);
   return (
     <div className='flex-flex-col h-screen justify-between'>
       <Fade top distance='10%' duration={2000}>
