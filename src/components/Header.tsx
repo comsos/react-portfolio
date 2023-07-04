@@ -36,19 +36,19 @@ export default function Header({mode}: HeaderProps) {
         </div>
       <ul className='pt-24 text-nav'>
           <li key='TechStack'>
-            <Link to={"react-portfolio/"}>Home</Link>
+            <Link to={"/"}>Home</Link>
           </li>
           <li key='AboutMe'>
-            <Link to={"react-portfolio/AboutMe"}>About Me</Link>
+            <Link to={"/AboutMe"}>About Me</Link>
           </li>
           <li key='TechStack'>
-            <Link to={"react-portfolio/TechStack"}>Tech Stack</Link>
+            <Link to={"/TechStack"}>Tech Stack</Link>
           </li>
           <li key='Projects'>
-            <Link to={"react-portfolio/Projects"}>Projects</Link>
+            <Link to={"/Projects"}>Projects</Link>
           </li>
           <li key='Links'>
-            <Link to={"react-portfolio/Links"}>Links</Link>
+            <Link to={"/Links"}>Links</Link>
           </li>
       </ul>
       
