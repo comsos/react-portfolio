@@ -9,7 +9,10 @@
     "deploy": "gh-pages -d dist",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "homepage" : "https://comsos.github.io/react-portfolio/",
+    "name": "my-website",
+    "version": "0.1.0"
   },
   "dependencies": {
     "hero-slider": "^3.2.0",

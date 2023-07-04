@@ -142,11 +142,11 @@ function App() {
             <div className={`absolute w-screen h-screen z-[-10] ${mode == 'light' ? 'bg-[#e6e6e6]' : 'bg-black'}`}>
               <button onClick={() => {mode == 'light' ? setMode('dark') : setMode('light')} } className={`font-nue absolute right-0 mr-12 ${mode == 'light' ? 'text-black' : 'text-white'} z-20`}>{ mode.charAt(0).toUpperCase() + mode.slice(1)}</button>
                 <Routes>
-                  <Route path="/" element={ <HeroSection mode={mode}/> }/>
-                  <Route path="/AboutMe" element={ <AboutMe mode={mode}/> }/>
-                  <Route path="/TechStack" element={ <TechStack mode={mode} /> }/>
-                  <Route path="/Projects" element={ <Projects mode={mode} /> }/>
-                  <Route path="/Links" element={ <Links mode={mode} />}/>
+                  <Route path="react-portfolio/" element={ <HeroSection mode={mode}/> }/>
+                  <Route path="react-portfolio/AboutMe" element={ <AboutMe mode={mode}/> }/>
+                  <Route path="react-portfolio/TechStack" element={ <TechStack mode={mode} /> }/>
+                  <Route path="react-portfolio/Projects" element={ <Projects mode={mode} /> }/>
+                  <Route path="react-portfolio/Links" element={ <Links mode={mode} />}/>
                 </Routes>
               </div>
           </BrowserRouter>
