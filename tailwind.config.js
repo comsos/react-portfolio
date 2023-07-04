@@ -41,7 +41,7 @@ export default {
       padding: "1rem",
     },
     fontFamily:{
-      'nue': ['Neue Montreal']
+      'nue': ['Neue Montreal'],
     }
   },
   plugins: [],
