@@ -9,7 +9,7 @@ export default function Projects({mode}: ProjectsProps) {
   return (
     <Fade bottom distance='10%'>
         <div>
-            <div className={` container text-right right-0 mr-24 text-nav mt-48 absolute ${mode == 'light' ? 'text-black' : 'text-white'}`}>
+            <div className={` container text-right right-0 mr-24 xl:text-nav text-2xl font-nue mt-48 absolute ${mode == 'light' ? 'text-black' : 'text-white'}`}>
                 Some projects are not shown due to confidentiality. <br/> 
                 I've helped create several ERP systems for the these industries: <br/>
                 Insurance Company, Government and Small Businesses

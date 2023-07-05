@@ -37,54 +37,54 @@ interface TechStackProps {
 export const TechStack = ({mode}: TechStackProps) => {
   return (
     <Fade left distance='10%'>
-        <div className="flex flex-col justify-center items-center h-screen text-center mt-[-3rem] lg:text-3xl md::text-nav">
+        <div className="flex flex-col justify-center items-center h-screen text-center mt-[-3rem] lg:text-3xl md:text-nav">
               <div className="flex flex-col mb-6">
                 <h1 className={` ${mode == 'light' ? 'text-black' : 'text-white' } `}>Front End</h1>
                   <div className="flex flex-row space-x-4 ">
-                      <img className='h-14' src={html} alt="react" />
-                      <img className='h-14' src={css} alt="css" />
-                      <img className='h-14' src={tailwind} alt="tailwind" />
-                      <img className='h-14' src={javascript} alt="js" />
-                      <img className='h-14' src={react} alt="react" />
+                      <img className='xl:h-14 lg:h-8 sm:h-8' src={html} alt="react" />
+                      <img className='xl:h-14 lg:h-8 sm:h-8' src={css} alt="css" />
+                      <img className='xl:h-14 lg:h-8 sm:h-8' src={tailwind} alt="tailwind" />
+                      <img className='xl:h-14 lg:h-8 sm:h-8' src={javascript} alt="js" />
+                      <img className='xl:h-14 lg:h-8 sm:h-8' src={react} alt="react" />
                   </div>
              </div>
              <div className="flex flex-col mb-6">
                   <h1 className={` ${mode == 'light' ? 'text-black' : 'text-white' } `}>Back End</h1>
                   <div className="flex flex-row space-x-4 ">
-                    <img className='h-14' src={python} alt="react" />
-                    <img className='h-14' src={csharp} alt="react" />
-                    <img className='h-14' src={java} alt="react" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={python} alt="react" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={csharp} alt="react" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={java} alt="react" />
                   </div>
               </div>
               <div className="flex flex-col mb-6">
                   <h1 className={` ${mode == 'light' ? 'text-black' : 'text-white' } `}>Database</h1>
                   <div className="flex flex-row space-x-4 ">
-                    <img className='h-14' src={mongodb} alt="mongodb" />
-                    <img className='h-14 border-slate-800 bg-slate-800 rounded-lg' src={mysql} alt="mysql" />
-                    <img className='h-14' src={postgresql} alt="postgresql" />
-                    <img className='h-14' src={mariadb} alt="mariadb" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={mongodb} alt="mongodb" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8 border-slate-800 bg-slate-800 rounded-lg' src={mysql} alt="mysql" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={postgresql} alt="postgresql" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={mariadb} alt="mariadb" />
                   </div>
               </div>
               <div className="flex flex-col mb-6">
                   <h1 className={` ${mode == 'light' ? 'text-black' : 'text-white' } `}>Frameworks</h1>
                   <div className="flex flex-row space-x-4 ">
-                    <img className='h-14' src={erpnext} alt="erpnext" />
-                    <img className='h-14' src={django} alt="spring" />
-                    <img className='h-14 border border-slate-800 bg-slate-800 rounded-full' src={flask} alt="react" />
-                    <img className='h-14' src={spring} alt="spring" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={erpnext} alt="erpnext" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={django} alt="spring" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8 border border-slate-800 bg-slate-800 rounded-full' src={flask} alt="react" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={spring} alt="spring" />
                   </div>
               </div>
               <div className="flex flex-col mb-6">
                   <h1 className={` ${mode == 'light' ? 'text-black' : 'text-white' } `}>Tools</h1>
                   <div className="flex flex-row space-x-4 ">
-                    <img className='h-14' src={vite} alt="vite" />
-                    <img className='h-14' src={git} alt="git" />
-                    <img className='h-14' src={npm} alt="npm" />
-                    <img className='h-14' src={powershell} alt="powershell" />
-                    <img className='h-14' src={vscode} alt="vscode" />
-                    <img className='h-14' src={docker} alt="docker" />
-                    <img className='h-14' src={postman} alt="docker" />
-                    <img className='h-14' src={linux} alt="docker" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={vite} alt="vite" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={git} alt="git" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={npm} alt="npm" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={powershell} alt="powershell" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={vscode} alt="vscode" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={docker} alt="docker" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={postman} alt="docker" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={linux} alt="docker" />
                   </div>
               </div>
         </div>
