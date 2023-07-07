@@ -7,7 +7,7 @@ interface HeroSectionProps {
 export const HeroSection = ({mode}: HeroSectionProps) => {
   return (
     <Fade top distance='10%'>
-        <div className={`font-nue container text-right right-0 mr-24 text-3xl mt-48 absolute ${mode == 'light' ? 'text-black' : 'text-white'}`}>
+        <div className={` container text-right right-0 mr-24 text-hero mt-48 absolute ${mode == 'light' ? 'text-black' : 'text-white'}`}>
             Transforming ideas <br/> into stunning websites <br/>that leave a lasting impression
         </div>
     </Fade>

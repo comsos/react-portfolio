@@ -7,16 +7,6 @@ export default {
   theme: {
     extend: {},
     fontSize: {
-      '2xl': ['2rem', {
-        lineHeight: '2rem',
-        letterSpacing: '-0.02em',
-        fontWeight: '1',
-      }],
-      '3xl': ['3rem', {
-        lineHeight: '3.25rem',
-        letterSpacing: '-0.02em',
-        fontWeight: '1',
-      }],
       'nav': ['2rem', {
         lineHeight: '2rem',
         letterSpacing: '-0.02em',
@@ -27,17 +17,22 @@ export default {
         letterSpacing: '-0.02em',
         fontWeight: '1',
       }],
+      'hero': ['4rem', {
+        lineHeight: '4rem',
+        letterSpacing: '-0.02em',
+        fontWeight: '1',
+      }],
       'xs': '.75rem',
       'sm': '.875rem',
       'tiny': '.875rem',
-       'base': '1rem',
-       'lg': '1.125rem',
-       'xl': '1.25rem',
-       '2xl': '1.5rem',
+      'base': '1rem',
+      'lg': '1.125rem',
+      'xl': '1.25rem',
+      '2xl': '1.5rem',
       '3xl': '1.875rem',
       '4xl': '2.25rem',
-       '5xl': '3rem',
-       '6xl': '4rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
       '7xl': '5rem',
     },
     screens: {
