@@ -3,6 +3,7 @@ import css from '../assets/frontend/css.svg'
 import html from '../assets/frontend/html.svg'
 import javascript from '../assets/frontend/javascript.svg'
 import tailwind from '../assets/frontend/tailwind.svg'
+import typescript from '../assets/frontend/typescript.svg'
 
 import csharp from '../assets/backend/csharp.svg'
 import java from '../assets/backend/java.svg'
@@ -17,6 +18,7 @@ import django from '../assets/frameworks/django.svg'
 import flask from '../assets/frameworks/flask.svg'
 import spring from '../assets/frameworks/spring.svg'
 import erpnext from '../assets/frameworks/erpnext.svg'
+import vue from '../assets/frameworks/vue.svg'
 
 import linux from '../assets/os/linux.svg'
 
@@ -45,6 +47,7 @@ export const TechStack = ({mode}: TechStackProps) => {
                       <img className='xl:h-14 lg:h-8 sm:h-8' src={css} alt="css" />
                       <img className='xl:h-14 lg:h-8 sm:h-8' src={tailwind} alt="tailwind" />
                       <img className='xl:h-14 lg:h-8 sm:h-8' src={javascript} alt="js" />
+                      <img className='xl:h-14 lg:h-8 sm:h-8' src={typescript} alt="typescript" />
                       <img className='xl:h-14 lg:h-8 sm:h-8' src={react} alt="react" />
                   </div>
              </div>
@@ -72,6 +75,7 @@ export const TechStack = ({mode}: TechStackProps) => {
                     <img className='xl:h-14 lg:h-8 sm:h-8' src={django} alt="spring" />
                     <img className='xl:h-14 lg:h-8 sm:h-8 border border-slate-800 bg-slate-800 rounded-full' src={flask} alt="react" />
                     <img className='xl:h-14 lg:h-8 sm:h-8' src={spring} alt="spring" />
+                    <img className='xl:h-14 lg:h-8 sm:h-8' src={vue} alt="vue" />
                   </div>
               </div>
               <div className="flex flex-col mb-6">
