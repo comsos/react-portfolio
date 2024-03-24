@@ -14,8 +14,8 @@ export default function Header({mode}: HeaderProps) {
   }, [mode]);
   return (
     <div className={`font-nue mt-10 ml-10 absolute ${mode == 'light' ? 'text-black' : 'text-white'} `}>
-        <h1 className=' text-name '>Cosmos Grimaldo</h1>
-        <div className="text-3xl">
+        <h1 className={`text-name md:text-5xl`}  >Cosmos Grimaldo</h1>
+        <div className={`text-3xl`}>
           <Typewriter
               options={{
                   loop: true,
