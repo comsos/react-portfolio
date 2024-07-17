@@ -1,4 +1,3 @@
-import arrow from '../assets/down-arrow-svgrepo-com.svg'
 import Fade from 'react-reveal/Fade';
 
 interface ProjectsProps {
