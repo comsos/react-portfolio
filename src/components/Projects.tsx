@@ -11,7 +11,7 @@ export default function Projects({mode}: ProjectsProps) {
         <div>
             <div className={` container text-right right-0 mr-24 xl:text-nav text-2xl font-nue mt-48 absolute md:text-xl ${mode == 'light' ? 'text-black' : 'text-white'}`}>
                 Some projects are not shown due to confidentiality. <br/> 
-                I've helped create several ERP systems for the these industries: <br/>
+                I've helped create several ERP systems for these industries: <br/>
                 Insurance Company, Government and Small Businesses
             </div>
             <div className='flex flex-col justify-center items-center h-screen grid-cols-1 grid-rows-2'>

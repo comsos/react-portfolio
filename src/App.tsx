@@ -9,6 +9,7 @@ import Ticker from "./components/Ticker";
 import Fade from "react-reveal/Fade";
 import Links from './components/Links'
 import Projects from './components/Projects'
+import Practicum from './components/Practicum'
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -135,7 +136,7 @@ function App() {
     "The End"
   ];
   return (
-    <div className='flex-flex-col h-screen justify-between'>
+    <div className='flex-flex-col h-screen justify-between overflow-hidden'>
       <Fade top distance='10%' duration={2000}>
           <BrowserRouter>
             <Header mode={mode} />
@@ -146,6 +147,7 @@ function App() {
                   <Route path="/AboutMe" element={ <AboutMe mode={mode}/> }/>
                   <Route path="/TechStack" element={ <TechStack mode={mode} /> }/>
                   <Route path="/Projects" element={ <Projects mode={mode} /> }/>
+                  <Route path="/Practicum" element={ <Practicum mode={mode} /> }/>
                   <Route path="/Links" element={ <Links mode={mode} />}/>
                 </Routes>
               </div>
@@ -158,8 +160,8 @@ function App() {
           </div>
             <p >
               Designed and Created by: Cosmos Grimaldo <br/>
-              Technologies used: React, TailwindCSS <br/>
-              <p className='flex flex-row justify-center text-center'>2023<p  className={`${mode == 'light' ? 'hidden' : ''}`} >; take care of yourself, shinji</p></p>
+              Technologies used: Vite, React, TailwindCSS <br/>
+              <p className='flex flex-row justify-center text-center'>2024<p  className={`${mode == 'light' ? 'hidden' : ''}`} >; take care of yourself, shinji</p></p>
             </p>
           </div>
       </Fade>

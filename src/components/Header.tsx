@@ -48,8 +48,11 @@ export default function Header({mode}: HeaderProps) {
             <Link to={"/Projects"}>Projects</Link>
           </li>
           <li key='Links'>
-            <Link to={"/Links"}>Links</Link>
+            <Link to={"/Practicum"}>Practicum</Link>
           </li>
+          <li key='Links'>
+            <Link to={"/Links"}>Links</Link>
+          </li>     
       </ul>
       
     </div>
