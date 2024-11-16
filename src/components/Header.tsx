@@ -11,6 +11,7 @@ export default function Header({ mode }: HeaderProps) {
     useEffect(() => {
     }, [mode]);
     return (
+        //TODO : add mobile view on this shi, its been years mf.
         <div className={`font-nue absolute ${mode == 'light' ? 'text-black' : 'text-white'} `}>
             <div className='h-screen w-screen flex items-center sm:hidden bg-black text-white text-5xl'>
                 <div className='text-center '> This Portfolio is currently not available on mobile view. </div>
