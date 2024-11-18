@@ -9,7 +9,7 @@ import Ticker from "./components/Ticker";
 import Fade from "react-reveal/Fade";
 import Links from "./components/Links";
 import Projects from "./components/Projects";
-import History from "./components/History";
+// import History from "./components/History";
 
 function App() {
   const [mode, setMode] = useState("light");
