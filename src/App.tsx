@@ -1,17 +1,18 @@
-import './App.css'
-import { useState } from 'react'
-import { HeroSection } from './components/HeroSection'
-import { TechStack } from './components/TechStack'
-import Header from "./components/Header"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import AboutMe from './components/AboutMe';
+import "./App.css";
+import { useState } from "react";
+import { HeroSection } from "./components/HeroSection";
+import { TechStack } from "./components/TechStack";
+import Header from "./components/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AboutMe from "./components/AboutMe";
 import Ticker from "./components/Ticker";
 import Fade from "react-reveal/Fade";
-import Links from './components/Links'
-import Projects from './components/Projects'
+import Links from "./components/Links";
+import Projects from "./components/Projects";
+import History from "./components/History";
 
 function App() {
-  const [mode, setMode] = useState('light')
+  const [mode, setMode] = useState("light");
   const dialogue: string[] = [
     "Ayanami.",
     "Where are we?",
@@ -132,40 +133,68 @@ function App() {
     "that mankind ever existed.",
     "Goodbye, Mother.",
     "How disgusting.",
-    "The End"
+    "The End",
   ];
   return (
-    <div className='flex-flex-col h-screen justify-between overflow-hidden'>
-      <Fade top distance='10%' duration={2000}>
+    <div className="flex-flex-col h-screen justify-between overflow-hidden">
+      <Fade top distance="10%" duration={2000}>
         <BrowserRouter>
           <Header mode={mode} />
-          <div className={`absolute w-screen h-screen z-[-10] ${mode == 'light' ? 'bg-[#e6e6e6]' : 'bg-black'}`}>
-            <button onClick={() => { mode == 'light' ? setMode('dark') : setMode('light') }} className={`font-nue absolute right-0 mr-12 ${mode == 'light' ? 'text-black' : 'text-white'} z-20`}>{mode.charAt(0).toUpperCase() + mode.slice(1)}</button>
+          <div
+            className={`absolute w-screen h-screen z-[-10] ${mode == "light" ? "bg-[#e6e6e6]" : "bg-black"}`}
+          >
+            <button
+              onClick={() => {
+                mode == "light" ? setMode("dark") : setMode("light");
+              }}
+              className={`font-nue absolute right-0 mr-12 ${mode == "light" ? "text-black" : "text-white"} z-20`}
+            >
+              {mode.charAt(0).toUpperCase() + mode.slice(1)}
+            </button>
             <Routes>
               <Route path="/" element={<HeroSection mode={mode} />} />
               <Route path="/AboutMe" element={<AboutMe mode={mode} />} />
               <Route path="/TechStack" element={<TechStack mode={mode} />} />
               <Route path="/Projects" element={<Projects mode={mode} />} />
+              {/* <Route path="/History" element={<History mode={mode} />} /> */}
               <Route path="/Links" element={<Links mode={mode} />} />
             </Routes>
           </div>
         </BrowserRouter>
-        <div className={`border-b-8 mb-32 w-screen absolute h-20 bottom-0 ${mode == 'light' ? 'border-black' : 'border-white'}`} />
-        <div className={`font-nue absolute inset-x-0 bottom-0 flex flex-col justify-center text-center ${mode == 'light' ? 'text-black' : 'text-white'}`}>
-          <div className={`${mode == 'light' ? 'hidden' : ''}`}>
+        <div
+          className={`border-b-8 mb-32 w-screen absolute h-20 bottom-0 ${mode == "light" ? "border-black" : "border-white"}`}
+        />
+        <div
+          className={`font-nue absolute inset-x-0 bottom-0 flex flex-col justify-center text-center ${mode == "light" ? "text-black" : "text-white"}`}
+        >
+          <div className={`${mode == "light" ? "hidden" : ""}`}>
             <Ticker messages={dialogue} interval={2000} />
-            <p className="text-[#e6e6e6]">Dialogues above is from <a href='https://youtu.be/hf1DkBQRQj4' target='_blank' className=' text-blue-700'>The Evagelion series.</a> (The Inspiration for this design)</p>
+            <p className="text-[#e6e6e6]">
+              Dialogues above is from{" "}
+              <a
+                href="https://youtu.be/hf1DkBQRQj4"
+                target="_blank"
+                className=" text-blue-700"
+              >
+                The Evagelion series.
+              </a>{" "}
+              (The Inspiration for this design)
+            </p>
           </div>
-          <p >
+          <p>
             Designed and Created by: Cosmos Grimaldo <br />
             Technologies used: Vite, React, TailwindCSS <br />
-            <p className='flex flex-row justify-center text-center'>2024<p className={`${mode == 'light' ? 'hidden' : ''}`} >; take care of yourself, shinji</p></p>
+            <p className="flex flex-row justify-center text-center">
+              2024
+              <p className={`${mode == "light" ? "hidden" : ""}`}>
+                ; take care of yourself, shinji
+              </p>
+            </p>
           </p>
         </div>
       </Fade>
-
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
